@@ -1,16 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 using OrangeHrAddToList1.PageObject_Model;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using TechTalk.SpecFlow;
 
 namespace OrangeHrAddToList1.Steps
 {
-     [Binding]
+    [Binding]
     public sealed class OrangeHrSearchSD
     {
         OrangeHrSearchPOM _searchPage = new OrangeHrSearchPOM(Environment.Driver);

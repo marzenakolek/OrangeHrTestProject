@@ -90,12 +90,10 @@
     <Compile Include="Steps\OrangeHeLogInSD.cs" />
     <Compile Include="Steps\OrangeHrSearchSD.cs" />
     <Compile Include="Steps\SD_1_OrangeHrAddToListFeatureStepDefinition.cs" />
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Credentials.cs" />
     <Compile Include="Utils\Environment.cs" />
     <Compile Include="Utils\LoginHelper.cs" />
-    <Compile Include="Utils\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
