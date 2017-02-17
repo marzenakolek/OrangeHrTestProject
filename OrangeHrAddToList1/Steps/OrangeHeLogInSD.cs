@@ -1,9 +1,5 @@
 ﻿using NUnit.Framework;
 using OrangeHrAddToList1.PageObject_Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using TechTalk.SpecFlow;
 
 namespace OrangeHrAddToList1.Steps
@@ -11,17 +7,13 @@ namespace OrangeHrAddToList1.Steps
     [Binding]
     public sealed class OrangeHeLogInSD
     {
-        //OrangeHrLogInPOM _pageLogIn = new OrangeHrLogInPOM (Environment.Driver);
-        private string url;
+        OrangeHrLogInPOM _pageLogIn = new OrangeHrLogInPOM(Environment.Driver);
 
-      
         [Given(@"the user is on SiteUrl: ""(.*)""")]
         public void GivenTheUserIsOnSiteUrl(string webpage)
         {
-            //Environment.Driver.Navigate().GoToUrl(webpage);
-            url = webpage;
         }
-      
+
         [Given(@"he enters (.*)")]
         public void GivenHeEnters(string name)
         {
@@ -47,7 +39,7 @@ namespace OrangeHrAddToList1.Steps
             Assert.AreEqual(webpage, Environment.Driver.Url);
         }
 
-      
+
         [Given(@"the user is on page: ""(.*)""")]
         public void GivenTheUserIsOnPage(string webpage)
         {

@@ -1,11 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Internal;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using TechTalk.SpecFlow;
 
 namespace OrangeHrAddToList1.Steps
@@ -102,25 +98,12 @@ namespace OrangeHrAddToList1.Steps
         [Then(@"new location is added to list")]
         public void ThenNewLocationIsAddedToList()
         {
-            //string location = "Jan Kowalski";
-            //List<String> exp_options = new List<string>() { location };
-            //Assert.AreEqual(true, location.Contains(location)); 
-
-            //if(czy strona posiada "Already exists" w //*[@id="location_name-error"]) { false }
-            // else { wyszukać i sprawdzić w gridzie }
-
-            //IWrapsElement test = _AddtoList.incorrectmessage as IWrapsElement;
-
-            //var test1 = Environment.Driver.FindElement(_AddtoList.incorrectmessage.GetAttribute())
-            // _AddtoList.incorrectmessage
-
-
             IWebElement incorrectmessage = null;
             try
             {
                 incorrectmessage = Environment.Driver.FindElement(By.CssSelector("#location_name-error"));
             }
-            catch(Exception ex) { }
+            catch (Exception ex) { }
 
             if (incorrectmessage != null)
             {

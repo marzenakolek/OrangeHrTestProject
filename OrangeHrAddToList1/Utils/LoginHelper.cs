@@ -1,11 +1,4 @@
-﻿using NUnit.Framework;
-using OrangeHrAddToList1.PageObject_Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TechTalk.SpecFlow;
+﻿using OrangeHrAddToList1.PageObject_Model;
 
 namespace OrangeHrAddToList1.Utils
 {
