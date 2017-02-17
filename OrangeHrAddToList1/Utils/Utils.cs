@@ -8,6 +8,6 @@ namespace OrangeHrAddToList1.Utils
 {
     public static class Utils
     {
-        public static string SiteUrl { get { return "https://enterprise-demo.orangehrmlive.com/"; } }
+       // public static string SiteUrl { get { return "https://enterprise-demo.orangehrmlive.com/"; } }
     }
 }

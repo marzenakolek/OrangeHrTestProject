@@ -4,20 +4,24 @@
 
 @mytag
 Scenario: Sucessfull adding new location to list
-	Given user is on page:"admin/viewLocations"
-	When click Add buttom
-    Then goes on page: "admin/location"
-	When user enters valid credentials:
-	| Key             | Value                      |
-	| Name            | Jan Kowalski               |
-	| State           | śląsk                      |
-	| City            | Katowice                   |
-	| Adrres          | Katowice ul. Korfantego 99 |
-	| Zip Code        | 00-888                     |
-	| Phone           | 676767767                  |
-	| Fax             | 998987689                  |
-	| Notes           | No notes                   |
+	Given Given the user is on SiteUrl: "https://enterprise-demo.orangehrmlive.com/auth/login"
+	And he enters Admin
+	And user enters admin
+	And click Login button
+	And Admin click on Admni button
+    And Admin clik on Organiztion dropdown
+	And Admin sellect Locations
+	And click Add buttom
+    And goes on page: "admin/location"
+	And user enter: "Jan Kowalski" as Name
+	And enter: "śląsk " as State
+	And enter: "Katowice" as City
+	And enter:"Katowice ul. Korfantego 99" as Adrres  
+	And enter: "00-888" as Zip Code
+	And enter: "676767767" as Phone 
+	And enter: "998987689" as  Fax   
+	And enter: "No notes" as Notes
 	And sellect "Poland" in Country
 	And sellect "Europe/Rome" in Time Zone
-	And click Save button
+	When click Save button
     Then new location is added to list
